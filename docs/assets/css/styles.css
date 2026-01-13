@@ -1,0 +1,37 @@
+:root{
+  --primary: #1a73e8;
+  --bg: #f6f7f9;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --radius: 12px;
+  --container-max: 1100px;
+  --gap: 1.25rem;
+  --shadow: 0 6px 18px rgba(20,30,60,0.08);
+  --focus: 3px rgba(26,115,232,0.18);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;
+  color: #0f1724;
+  background: var(--bg);
+}
+
+/* Layout helpers */
+.container{
+  width: calc(100% - 2rem);
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* (estilos resumidos por brevedad; usa el completo si lo necesitas) */
+.header-inner, .hero-inner, .contact-inner, .footer-inner, .about-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap);
+}
+
+/* Resto de estilos (usa los mismos que definimos antes si quieres) */
+.brand-avatar{ border-radius: 999px; width:56px; height:56px; object-fit:cover; }
+.hero-bg{ position:absolute; inset:0; background-size:cover; background-position:center; }
+.btn-primary{ background:var(--primary); color:white; padding:.7rem 1rem; border-radius:10px; }
+/* Añade el CSS completo si quieres; este es mínimo para que la página tenga estilo básico */
