@@ -48,12 +48,11 @@
     --shadow-violet: 0 0 30px rgba(138, 43, 226, 0.3);
 }
 
-/* Dark Mode Variables */
 [data-theme="dark"] {
-    --cognitus-marble: #1A202C;
-    --cognitus-slate: #E2E8F0;
-    --cognitus-mist: #2D3748;
-    --cognitus-void: #F8F6F2;
+    --cognitus-marble: #1A202C;  /* Fondo oscuro */
+    --cognitus-slate: #E2E8F0;   /* Texto claro */
+    --cognitus-mist: #2D3748;    /* Gris oscuro */
+    --cognitus-void: #0F1419;    /* Cambiar a un gris muy oscuro/negro */
 }
 
 /* Reset & Base Styles */
@@ -85,9 +84,16 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: var(--spacing-sm);
 }
 
-h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
-h2 { font-size: clamp(2rem, 4vw, 3rem); }
-h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h1 { font-size: clamp(2rem, 4vw, 3rem); }
+h2 { font-size: clamp(1.5rem, 3vw, 2.5rem); }
+h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
+
+@media (min-width: 1200px) {
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2.5rem; }
+    h3 { font-size: 1.75rem; }
+}
+
 h4 { font-size: 1.5rem; }
 h5 { font-size: 1.25rem; }
 h6 { font-size: 1rem; }
@@ -324,6 +330,18 @@ img {
     align-items: center;
     justify-content: center;
     transition: all var(--transition-fast);
+    color: var(--cognitus-slate);
+}
+
+/* Agregar esto después de la línea 325 */
+[data-theme="dark"] .theme-toggle {
+    border-color: var(--cognitus-violet);
+    color: var(--cognitus-violet);
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+    background: rgba(138, 43, 226, 0.1);
+    border-color: var(--cognitus-violet-light);
 }
 
 .theme-toggle:hover {
